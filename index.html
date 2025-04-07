@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Travel Bucket List</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Navigation Bar - Flexbox */
+        nav {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        
+        /* Header */
+        header {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        /* Main Content - Grid Layout */
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .destination {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .destination:hover {
+            transform: translateY(-5px);
+        }
+        
+        .destination-content {
+            padding: 1.5rem;
+        }
+        
+        .destination img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: auto;
+        }
+        
+        /* Media Queries */
+        /* Tablet Layout */
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                padding: 1.5rem;
+                gap: 1.5rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+        
+        /* Mobile Layout */
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            main {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+                gap: 1rem;
+            }
+            
+            header {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">🌎 Travel Bucket List</div>
+        <div class="nav-links">
+            <a href="#Galápagos">Galápagos</a>
+            <a href="#Santorini">Santorini</a>
+            <a href="#Chiang">Chiang Mai</a>
+            <a href="#Tokyo">Tokyo</a>
+        </div>
+    </nav>
+    
+    <header>
+        <h1>My Travel Bucket List</h1>
+    </header>
+    
+    <main>
+        <section id="Galápagos" class="destination">
+            <img src="https://images.pexels.com/photos/31307993/pexels-photo-31307993/free-photo-of-black-browed-albatross-resting-on-falkland-islands.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="black-browed albatross">
+            <div class="destination-content">
+                <h2>Galápagos Islands, Ecuador</h2>
+                <p>The Galápagos Islands offer a unique opportunity to witness the Waved Albatross, a majestic bird with an extraordinary wingspan and captivating mating dance, found nowhere else on Earth. 
+                    This experience is both a thrilling wildlife encounter and a profound educational experience, allowing visitors to witness the bird's unique behavior and contribute to conservation efforts.</p>
+            </div>
+        </section>
+        
+        <section id="Santorini" class="destination">
+            <img src="https://images.pexels.com/photos/164284/pexels-photo-164284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Santorini">
+            <div class="destination-content">
+                <h2>Santorini, Greece</h2>
+                <p>Santorini is renowned for its stunning sunsets, iconic blue-domed churches, and white-washed buildings. 
+                    The island offers a blend of history, culture, and natural beauty.
+                     It's the ideal choice for couples seeking romance or anyone who wants to experience a picturesque Greek island.</p>
+            </div>
+        </section>
+        
+        <section id="Chiang" class="destination">
+            <img src="https://images.pexels.com/photos/889931/pexels-photo-889931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Low Angle View of Temple at Night">
+            <div class="destination-content">
+                <h2>Chiang Mai, Thailand</h2>
+                <p>This northern city blends ancient temples, such as Wat Phra That Doi Suthep, with vibrant markets and serene landscapes.
+                    It's ideal for those seeking cultural immersion, adventure, and relaxation, with opportunities for ethical elephant encounters and nature treks.</p>
+            </div>
+        </section>
+        
+        <section id="Tokyo" class="destination">
+            <img src="https://images.pexels.com/photos/31366330/pexels-photo-31366330/free-photo-of-serene-japanese-garden-with-pagoda-and-pond.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Serene Japanese Garden with Pagoda and Pond">
+            <div class="destination-content">
+                <h2>Tokyo, Japan</h2>
+                <p>Kyoto is a city with a rich cultural heritage and stunning traditional architecture. 
+                    It offers an opportunity to experience authentic Japanese culture, from its serene temples and gardens to its vibrant geisha districts. 
+                    Kyoto is perfect for history and culture enthusiasts.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Where is the place of your dream vacation?✈️</p>
+    </footer>
+</body>
+</html>
